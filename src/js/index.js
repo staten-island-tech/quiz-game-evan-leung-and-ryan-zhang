@@ -6,6 +6,7 @@ const buttons4ID = document.getElementById("buttons4");
 const startButton = document.getElementById("startbtn");
 const nextButton = document.getElementById("submitbtn");
 const containerID = document.getElementById("container");
+const scoreboardID = document.getElementById("scoreboard");
 
 const btn11ID = document.getElementById("btn11");
 const btn12ID = document.getElementById("btn12");
@@ -41,12 +42,14 @@ btn14ID.addEventListener("click", question1wrong);
 function question1correct() {
   quizscore++;
   buttons1ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 function question1wrong() {
   quizscore;
   buttons1ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
@@ -58,45 +61,51 @@ btn24ID.addEventListener("click", question2wrong);
 function question2correct() {
   quizscore++;
   buttons2ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 function question2wrong() {
   quizscore;
   buttons2ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 btn31ID.addEventListener("click", question3wrong);
 btn32ID.addEventListener("click", question3wrong);
-btn33ID.addEventListener("click", question3correct);
-btn34ID.addEventListener("click", question3wrong);
+btn33ID.addEventListener("click", question3wrong);
+btn34ID.addEventListener("click", question3correct);
 
 function question3correct() {
   quizscore++;
   buttons3ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 function question3wrong() {
   quizscore;
   buttons3ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 btn41ID.addEventListener("click", question4wrong);
 btn42ID.addEventListener("click", question4wrong);
-btn43ID.addEventListener("click", question4wrong);
-btn44ID.addEventListener("click", question4correct);
+btn43ID.addEventListener("click", question4correct);
+btn44ID.addEventListener("click", question4wrong);
 
 function question4correct() {
   quizscore++;
   buttons4ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
 
 function question4wrong() {
   quizscore;
   buttons4ID.classList.add("remove");
+  scoreboardID.innerText = quizscore;
   console.log(quizscore);
 }
