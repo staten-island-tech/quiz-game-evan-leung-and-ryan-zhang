@@ -1,4 +1,5 @@
 console.log("Activated");
+import { questions } from "./questions.js";
 const startbutton = document.getElementById("startbtn");
 const container = document.getElementById("container");
 const question = document.getElementById("question");
@@ -9,17 +10,6 @@ let button1 = document.getElementById("btn1");
 let button2 = document.getElementById("btn2");
 let button3 = document.getElementById("btn3");
 let button4 = document.getElementById("btn4");
-
-const questions = ["Question 1", "Question 2"];
-const correctAnswers = ["Answer 1", "Answer7"];
-const wrongAnswers = [
-  "Answer 2",
-  "Answer 3",
-  "Answer 4",
-  "Answer 5",
-  "Answer 6",
-  "Answer 8",
-];
 
 startbutton.addEventListener("click", startGame);
 let quizScore = 0;

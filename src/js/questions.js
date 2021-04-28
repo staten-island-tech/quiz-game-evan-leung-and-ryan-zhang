@@ -1,5 +1,11 @@
-export const questions;
 const questions = [
-  (question1 = ["Question 1", "Answer 1", "Answer 2", "Answer 3", "Answer 4"]),
-  (question2 = ["Question 2", "Choice 1", "Choice 2", "Choice 3", "Choice 4"]),
+  {
+    theQuestion: "Which American Ship was DD-459?",
+    answer1: "USS Laffey",
+    answer2: "USS Helena",
+    answer3: "USS Independence",
+    answer4: "USS Allen M Sumner",
+  },
 ];
+
+export { questions };
