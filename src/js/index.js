@@ -3,35 +3,59 @@ import { questions } from "./questions.js";
 const startbutton = document.getElementById("startbtn");
 const container = document.getElementById("container");
 const question = document.getElementById("question");
-const buttons = document.getElementById("buttons");
 const scoreboardID = document.getElementById("scoreboard");
+const button1 = document.getElementById("btn1");
+const button2 = document.getElementById("btn2");
+const button3 = document.getElementById("btn3");
+const button4 = document.getElementById("btn4");
 
-let button1 = document.getElementById("btn1");
-let button2 = document.getElementById("btn2");
-let button3 = document.getElementById("btn3");
-let button4 = document.getElementById("btn4");
+const buttons = [button1, button2, button3, button4];
+
+let quizScore = 0;
+let questionNumber = -1;
+let totalQuestions = 4;
 
 startbutton.addEventListener("click", startGame);
-let quizScore = 0;
 
 function startGame() {
   startbutton.classList.add("remove");
   container.classList.remove("remove");
+  nextQuestion();
 }
 
-buttons.addEventListener("click", scoreKeeper, nextQuestion);
+function changeQuestion(qNumber) {
+  endGame();
+  question.innerText = questions[qNumber].theQuestion;
+  button1.innerText = questions[qNumber].answer1;
+  button2.innerText = questions[qNumber].answer2;
+  button3.innerText = questions[qNumber].answer3;
+  button4.innerText = questions[qNumber].answer4;
+  buttons.forEach(function (button) {
+    button.addEventListener("click", scoreKeeper);
+  });
+}
 
-function scoreKeeper(e) {
-  if ((e.target.parent = correctAnswers)) {
+function scoreKeeper() {
+  console.log(EventTarget.value);
+  console.log(questions[questionNumber].answer);
+  if (event.target.value == questions[questionNumber].answer) {
     quizScore++;
     scoreboardID.innerText = quizScore;
+    nextQuestion();
   } else {
-    quizScore;
-    scoreboardID.innerText = quizScore;
+    nextQuestion();
   }
 }
 
-function nextQuestion(theQuestion, answer1, answer2, answer3, answer4) {
-  htmlButtons = document.querySelector(".container");
-  console.log(htmlButtons);
+function nextQuestion() {
+  questionNumber++;
+  console.log(questionNumber);
+  changeQuestion(questionNumber);
+}
+
+function endGame() {
+  if (questionNumber >= 4) {
+    container.classList.add("remove");
+  } else {
+  }
 }
