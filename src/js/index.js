@@ -36,8 +36,8 @@ function changeQuestion(qNumber) {
 }
 
 function scoreKeeper() {
-  console.log(EventTarget.value);
-  console.log(questions[questionNumber].answer);
+  console.log(EventTarget.value); // Trouble Shooting
+  console.log(questions[questionNumber].answer); // Trouble Shooting
   if (event.target.value == questions[questionNumber].answer) {
     quizScore++;
     scoreboardID.innerText = quizScore;
@@ -49,7 +49,7 @@ function scoreKeeper() {
 
 function nextQuestion() {
   questionNumber++;
-  console.log(questionNumber);
+  console.log(questionNumber); // Trouble Shooting
   changeQuestion(questionNumber);
 }
 
