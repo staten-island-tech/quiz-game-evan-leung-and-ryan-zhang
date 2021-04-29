@@ -36,7 +36,7 @@ function changeQuestion(qNumber) {
 }
 
 function scoreKeeper() {
-  console.log(EventTarget.value); // Trouble Shooting
+  console.log(event.target.value); // Trouble Shooting
   console.log(questions[questionNumber].answer); // Trouble Shooting
   if (event.target.value == questions[questionNumber].answer) {
     quizScore++;
